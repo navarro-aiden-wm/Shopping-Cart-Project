@@ -4,7 +4,7 @@
  * User: session2
  * Date: 2/9/16
  * Time: 4:34 PM
- */
+**/
 $hostname = 'localhost';
 $username = 'root';
 $password = 'password';
@@ -12,8 +12,10 @@ $password = 'password';
 try
 {
     $dbh = new PDO("mysql:host=$hostname;dbname=Watches", $username, $password);
+
+
     // set the PDO error mode to exception
-    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
 }
 catch(PDOException $e)
 {
@@ -50,9 +52,9 @@ if(@$_POST['addUser'])
     }
 }
 
-/**
- * We'll always want to pull the users to show them in the table
- */
+
+
+
 $stmt = $dbh->prepare('SELECT * FROM userSignUp');
 $stmt->execute();
 $users = $stmt->fetchAll();
@@ -68,8 +70,8 @@ $users = $stmt->fetchAll();
     <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
     <title>Watch Shop</title>
     <script src="jquery-2.1.4.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
-    <link rel="stylesheet" type="text/css" href="navagation.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/navagation.css"/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
@@ -179,8 +181,8 @@ $users = $stmt->fetchAll();
 
         <tbody>
         <?php
-        foreach($users as $user){
-            ?>
+        foreach($users as $user){}
+           ?>
             <tr>
                 <td><?php echo $user['iduserSignUp']?></td>
                 <td><?php echo $user['nameFirst']?></td>
@@ -191,7 +193,7 @@ $users = $stmt->fetchAll();
                 <td><?php echo $user['birthDate']?></td>
             </tr>
             <?php
-        }
+
         ?>
         </tbody>
     </table>
