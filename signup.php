@@ -166,7 +166,7 @@ $users = $stmt->fetchAll();
         </div>
     </div>
 
-    <p align="center">For the propose of the demonstration of this site all entered info will be displayed.</p>
+    <p align="center">For the purpose of the demonstration of this site all entered information will be displayed.</p>
 
     <table class="table" align="center">
         <thead>
