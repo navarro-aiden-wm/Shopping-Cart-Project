@@ -31,9 +31,12 @@
 </div>
 
 <div id="content">
-
+<h1>Your cart</h1>
+    <div>
+    <p>The Batman</p>
+    <img src="imgs/Batman.jpg" width="100" height="100">
+        29.99$
 </div>
-
-
+<p align="center">Total: 29:99$</p>
 </body>
 </html>
